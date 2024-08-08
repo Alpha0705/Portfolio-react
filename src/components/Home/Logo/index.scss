@@ -1,0 +1,25 @@
+.logo-container {
+    position: absolute;
+    top: 0;
+    right: 10%;
+    bottom: 200px;
+    left: auto;
+    width: 500px;
+    height: 100px;
+    margin: auto;
+    opacity: 0; /* Start hidden */
+    z-index: 0;
+    transform: translateY(100px); /* Initial position for animation */
+
+    .solid-logo {
+        position: absolute;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: 0;
+        width: 100%;
+        opacity: 0; /* Start hidden */
+        transform: translateY(100px) rotate(-40deg); /* Tilt image by 10 degrees */
+        z-index: 1;
+    }
+}
