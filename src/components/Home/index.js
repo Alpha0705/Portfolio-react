@@ -4,13 +4,14 @@ import './index.scss';
 import { useEffect, useState } from 'react';
 import AnimatedLetters from '../AnimationLetter';
 import Logo from './Logo';
+import Loader from 'react-loaders';
 
 const Home = () => {
     const [letterClass, setLetterClass] = useState('text-animate');
     const nameArray = ['e', 'e', 'v', ' ', 'S', 'h', 'a', 'h'];
     const jobArray = [
         'W', 'e', 'b', ' ', 'D', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r', ' ',
-        '&', ' ', 'C', 'y', 'b', 'e', 'r', ' ', 'E', 't', 'h', 'u', 's', 'i', 'a', 's', 't'
+        '&', ' ', 'C', 'y', 'b', 'e', 'r',' ','E', 'n', 't', 'h', 'u', 's', 'i', 'a', 's', 't'
     ];
 
     useEffect(() => {
@@ -21,7 +22,8 @@ const Home = () => {
     }, []);
 
     return (
-        <div className="container home-page">
+        <>
+        <div className="home-page">
             <div className="text-zone">
                 <h1>
                     <span className={letterClass}>H</span>
@@ -37,8 +39,10 @@ const Home = () => {
                 <h2>FrontEnd / UI/UX / RedTeam Analyst / VAPT certified</h2>
                 <Link to="/contact" className="flat-button">CONTACT ME</Link>
             </div>
-            <Logo/>
+            <Logo />
         </div>
+        <Loader type='pacman'/>
+        </>
     );
 };
 

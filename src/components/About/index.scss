@@ -1,0 +1,81 @@
+/* Cube Container */
+.stage-cube {
+    position: relative;
+    width: 400px; /* Adjust width as needed */
+    height: 400px; /* Adjust height as needed */
+    transform-style: preserve-3d; /* Ensure 3D transforms work correctly */
+    transform: rotateX(0deg) rotateY(0deg); /* Initial position */
+    margin-left: 150px; /* Adjust to move the cube to the left */
+    margin-top: 100px;
+    perspective: 1500px; /* Adds depth and improves the 3D effect */
+}
+
+/* Cube Spinner */
+.cube-spinner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: spin-cube 12s linear infinite; /* Smooth animation with linear timing */
+}
+
+/* Cube Faces */
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    background: rgba(255, 255, 255, 0.8); /* Increased opacity to 0.8 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px; /* Adjusted for better fit */
+    color: #000; /* Black text for contrast */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Enhanced shadow for depth effect */
+    text-align: center;
+    z-index: 2;
+    backface-visibility: hidden; /* Hide the back face of the cube when facing away */
+}
+
+/* Icons styling */
+.icon {
+    font-size: 200px; /* Adjusted icon size for visibility */
+}
+
+/* Colors for icons */
+.github { color: #333; } /* GitHub gray */
+.html { color: #e34f26; } /* HTML orange */
+.css { color: #1572b6; } /* CSS blue */
+.react { color: #61dafb; } /* React light blue */
+.js { color: #f7df1e; } /* JavaScript yellow */
+.security { color: #007bff; } /* Cybersecurity blue */
+
+/* Faces positioning */
+.face1 { transform: rotateY(0deg) translateZ(200px); } /* Front face */
+.face2 { transform: rotateY(90deg) translateZ(200px); } /* Right face */
+.face3 { transform: rotateY(180deg) translateZ(200px); } /* Back face */
+.face4 { transform: rotateY(-90deg) translateZ(200px); } /* Left face */
+.face5 { transform: rotateX(90deg) translateZ(200px); } /* Top face */
+.face6 { transform: rotateX(-90deg) translateZ(200px); } /* Bottom face */
+
+/* Keyframe Animation */
+@keyframes spin-cube {
+    0%, 100% { transform: rotateX(0deg) rotateY(0deg); } /* Front face */
+    16.67% { transform: rotateY(-90deg); } /* Right face */
+    33.33% { transform: rotateY(-180deg); } /* Back face */
+    50% { transform: rotateY(-270deg); } /* Left face */
+    66.67% { transform: rotateX(90deg); } /* Top face */
+    83.33% { transform: rotateX(-90deg); } /* Bottom face */
+}
+
+/* Basic transition for animated letters */
+.text-animate {
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover effect for animated letters */
+  .text-animate-hover {
+    &:hover {
+      color: white; /* Change the text color to white on hover */
+    }
+  }

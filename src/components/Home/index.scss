@@ -1,15 +1,15 @@
 .home-page {
     .text-zone {
         position: absolute;
-        left: 10%;
-        top: 50%;
+        left: 10%; // Adjust this to move the text further to the left
+        top: 45%;
         transform: translateY(-50%);
         width: 40%;
         max-height: 90%;
     }
 
     h1 {
-        color: #fff;
+        color: #ffd700;
         font-size: 55px;
 
         &::before {
@@ -22,7 +22,6 @@
             margin-top: -20px;
             animation: fadeIn 1s  1.2s forwards;
             opacity: 0.6;
-
         }
 
         &::after {
@@ -43,7 +42,7 @@
             margin-left: 15px;
             margin-right: -11px;
             height: auto;
-            animation: fadeIn 1.5s forwards;
+            animation: fadeIn 1s forwards;
         }
     }
 
@@ -68,7 +67,7 @@
     border: 1px solid #ffd700;
     margin-top: 25px;
     float: left;
-    animation: fadeIn 1s 1.8s backwards;
+    animation: fadeIn 1s 1.8s backwards;    
     white-space: nowrap;
 
     &:hover{
